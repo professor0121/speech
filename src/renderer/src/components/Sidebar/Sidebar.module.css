@@ -1,0 +1,120 @@
+.sidebarComponent {
+  max-width: 350px;
+  height: 100vh;
+  display: flex;
+}
+
+/* Full width sidebar */
+.sideToggler {
+  width: 60px;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  gap: 20px;
+  transition: width 0.3s ease;
+}
+
+/* Expanded version */
+.sideTogglerExpanded {
+position: absolute;
+  width: 300px;
+  align-items: start;
+}
+
+
+.collectionChatView {
+  display: flex;
+  flex-direction: column; /* ✅ So items stack vertically */
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+}
+.collectionChatViewOpen{
+    align-items: start;
+}
+.menuItemOpen{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.menuItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.menuItem:hover {
+  color: #00bcd4;
+}
+
+.mainContainer {
+  flex: 1;
+  background: rgba(245, 246, 246, 0.035);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.headerSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headIcons {
+  display: flex;
+  gap: 5px;
+}
+
+.chattingMembers {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  overflow-y: auto;  /* ✅ enables vertical scrolling */
+  padding-right: 10px; /* optional: gives space to avoid scroll bar overlaying content */
+  scroll-behavior: smooth;
+}
+
+.chattingMembers::-webkit-scrollbar {
+  display: none;
+}
+.chattingMembers::-webkit-scrollbar-thumb {
+  background: #00bcd4;
+  border-radius: 4px;
+}
+
+.memberChatting {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.memberChatting img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #00bcd4;
+}
+
+.memberDetails p:first-child {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+.memberDetails p:last-child {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
